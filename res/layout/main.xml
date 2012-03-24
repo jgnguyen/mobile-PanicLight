@@ -11,15 +11,13 @@
             android:layout_centerInParent="true"
             android:src="@drawable/bginc" />
 
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="fill_parent"
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/imageView1"
-            android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/imageView1"
-            android:layout_marginBottom="36dp"
-            android:text="@string/switch_title" />
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:text="ToggleButton" />
 
     </RelativeLayout>
 
