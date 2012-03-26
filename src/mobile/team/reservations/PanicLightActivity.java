@@ -1,16 +1,19 @@
 package mobile.team.reservations;
 
 import android.app.Activity;
+import android.hardware.Camera;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.widget.Toast;
 
 public class PanicLightActivity extends Activity implements SensorEventListener {
 	private SensorManager sensorMgr;
 	private long updateTime;
+	private Camera cam;
+
+	private boolean isLight = false;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -25,12 +28,14 @@ public class PanicLightActivity extends Activity implements SensorEventListener 
 	@Override
 	public void onResume() {
 		super.onResume();
+		cam = Camera.open();
 		sensorMgr.registerListener(this, sensorMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
+		cam.release();
 		sensorMgr.unregisterListener(this);
 	}
 	
@@ -58,7 +63,18 @@ public class PanicLightActivity extends Activity implements SensorEventListener 
 	    if (acceleration >= 2) {
 	    	if (currTime - updateTime > 200) {
 	    		updateTime = currTime;
-	    		Toast.makeText(this, "Device was shaken!", Toast.LENGTH_LONG).show();
+	    		android.hardware.Camera.Parameters p = cam.getParameters();
+	    		if (!isLight) {
+		    		p.setFlashMode(android.hardware.Camera.Parameters.FLASH_MODE_TORCH);
+		    		cam.setParameters(p);
+		    		cam.startPreview();
+		    		isLight = true;
+	    		} else {
+	    			p.setFlashMode(android.hardware.Camera.Parameters.FLASH_MODE_OFF);
+		    		cam.setParameters(p);
+		    		cam.stopPreview();
+		    		isLight = false;
+	    		}
 	    	}
 	    }
 	}
