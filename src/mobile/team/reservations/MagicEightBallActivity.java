@@ -88,16 +88,17 @@ public class MagicEightBallActivity extends Activity implements SensorEventListe
 				int key;
 				if (weightPref.equals("normal")) {
 					key = generator.nextInt(responses.length);
-				} else if (weightPref.equals("good")){
-					long range = (long)8 - (long)0 + 1;
+				} else if (weightPref.equals("good")) {
+					long range = ((long)8 - (long)0) + 1;
 					long fraction = (long)(range * generator.nextDouble());
 					key = (int)fraction;
 				} else {
-					long range = (long)18 - (long)14 + 1;
-					long fraction = (long)(range * generator.nextDouble());
+					long range = ((long)18 - (long)14) + 1;
+					long fraction = 14 + (long)(range * generator.nextDouble());
 					key = (int)fraction;
-				}
-				
+				} 
+				android.util.Log.d("preference", "pref is " + weightPref);
+				android.util.Log.d("key", "key is " + key);
 				messageTV.setText(responses[key]);
 				helpTV.setText(R.string.help);
 				isShaken = false;

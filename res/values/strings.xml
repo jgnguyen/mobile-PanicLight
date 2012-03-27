@@ -12,9 +12,9 @@
     </string-array>
     
     <string-array name="weightValues">
-        <item name="normal">Normal</item>
-        <item name="good">Good</item>
-        <item name="bad">Negative</item>
+        <item name="normal">normal</item>
+        <item name="good">good</item>
+        <item name="bad">bad</item>
     </string-array>
     
     <string-array name="answers">
