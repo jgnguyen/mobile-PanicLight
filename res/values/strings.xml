@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World!</string>
-    <string name="app_name">Panic Light</string>
-    <string name="switch_title">Panic Detection</string>
+    <string name="app_name">Magic Eight Ball</string>
+    <string name="defaultTxt">Ask and shake &#8230;</string>
+    <string name="help">Shake to ask a new question</string>
+
+    <string-array name="answers">
+        <item>It is certain</item>
+        <item>It is decidedly so</item>
+		<item>Without a doubt</item>
+		<item>Yes - definitely</item>
+		<item>As I see it, yes</item>
+		<item>Most likely</item>
+		<item>Outlook good</item>
+		<item>Signs point to yes</item>
+		<item>Yes</item>
+		<item>Reply hazy, try again</item>
+		<item>Ask again later</item>
+		<item>Better not tell you now</item>
+		<item>Cannot predict now</item>
+		<item>Concentrate and ask again</item>
+		<item>Don\'t count on it</item>
+		<item>My reply is no</item>
+		<item>My sources say no</item>
+		<item>Outlook not so good</item>
+		<item>Very doubtful</item>
+	</string-array>
 
 </resources>

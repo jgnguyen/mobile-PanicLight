@@ -4,20 +4,33 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="250dp"
-            android:layout_height="250dp"            
-            android:layout_centerInParent="true"
-            android:src="@drawable/bginc" />
-
-        <ToggleButton
-            android:id="@+id/toggleButton1"
+        <TextView
+            android:id="@+id/helpTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView1"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="ToggleButton" />
+            android:layout_marginBottom="32dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bgimageball" />
+
+        <TextView
+            android:id="@+id/responseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/defaultTxt"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </RelativeLayout>
 
