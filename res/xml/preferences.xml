@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		android:title="First"
+		android:key="first">
+		
+	    <ListPreference
+	    	android:key="weightName"
+	    	android:title="Response Weight"
+	    	android:summary="Change the weight of which responses will come up"
+	    	android:defaultValue="normal"
+	    	android:entries="@array/weightNames"
+	    	android:entryValues="@array/weightValues"
+	    />
+	    
+	</PreferenceCategory>
+</PreferenceScreen>

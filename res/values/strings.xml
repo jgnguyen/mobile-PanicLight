@@ -5,6 +5,18 @@
     <string name="defaultTxt">Ask and shake &#8230;</string>
     <string name="help">Shake to ask a new question</string>
 
+    <string-array name="weightNames">
+        <item name="normal">Normal</item>
+        <item name="good">Good</item>
+        <item name="bad">Negative</item>
+    </string-array>
+    
+    <string-array name="weightValues">
+        <item name="normal">Normal</item>
+        <item name="good">Good</item>
+        <item name="bad">Negative</item>
+    </string-array>
+    
     <string-array name="answers">
         <item>It is certain</item>
         <item>It is decidedly so</item>
